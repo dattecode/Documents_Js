@@ -1,0 +1,144 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-100:#FFD700;
+    --primary-200:#ddb900;
+    --primary-300:#917800;
+    --accent-100:#c49216;
+    --accent-200:#5e3b00;
+    --text-100:#dcdcdc;
+    --text-200:#929292;
+    --bg-100:#1E1E1E;
+    --bg-200:#2d2d2d;
+    --bg-300:#454545;
+      
+}
+
+.container {
+    background-color: var(--bg-100);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Outfit', sans-serif;
+}
+
+#form_main {
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 80%;
+    height: 20rem;
+    background-color: var(--primary-100);
+    color: var(--bg-300);
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+input{
+    border: none;
+    border-radius: 0.5rem;
+    height: 2rem;
+    width: 15rem;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    outline: none;
+    margin-left: 1rem;
+}
+
+#userSubmit {
+    color: var(--bg-100);
+    cursor: pointer;
+    margin-left: 10rem;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+#userSubmit:hover{
+    background-color: #1E1E1E;
+    color: #917800;
+}
+
+/* --------------------- modalArea -------------------*/
+.containtModal {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.containModal__show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalError {
+    border-radius: 1rem;
+    position: relative;
+    background-color: var(--accent-200);
+    color: var(--accent-100);
+    height: 10rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#closeIcon {
+    background-color: var(--accent-100);
+    color: var(--accent-200);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    padding-top: 0.4rem;
+    position: absolute;
+    cursor: pointer;
+    top: 1rem;
+    right: 1.5rem;
+    font-weight: 900;
+    transition: background-color 0.5s;
+}
+
+#closeIcon:hover {
+    background-color: lightcoral;
+}
+/* div user--------------------------*/
+
+.user {
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30rem;
+    height: 8rem;
+    margin-top: 3rem;
+    background-color: var(--bg-300);
+    color: var(--text-200);
+}
+
+/* ----------bar ------------------ */
+
+.bar {
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--bg-200);
+    width: 90%;
+    height: 0.3rem;
+}
