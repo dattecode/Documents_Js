@@ -22,6 +22,11 @@ formUser.addEventListener("submit", function(event){
         return modalShow.classList.toggle("containModal__show")
     }
 
+    if (userPass !== userPass2){
+        printText("the passwords have to consider")
+        return modalShow.classList.toggle("containModal__show")
+    }
+
     if (!userEmail.includes("@")){
         printText("Email invalid")
         return modalShow.classList.toggle("containModal__show")
@@ -29,11 +34,6 @@ formUser.addEventListener("submit", function(event){
 
     if (repeatEmail(userEmail, data_users)){
         printText("this email is used")
-        return modalShow.classList.toggle("containModal__show")
-    }
-
-    if (userPass !== userPass2){
-        printText("the passwords have to consider")
         return modalShow.classList.toggle("containModal__show")
     }
 
